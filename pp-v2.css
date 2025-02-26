@@ -1,4 +1,4 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -24,7 +24,6 @@ video {
 
 /* Introdução */
 .Nome {
-    background: rgba(0, 0, 0, 0.6);
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
@@ -50,3 +49,44 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 190px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer a:hover::after {
+    transform: scaleX(1);
+}
